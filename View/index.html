@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../Style/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 class="title">Image Editor</h1>
+    <div class="container">
+      <!-- Mantain the width and height here to use the getContext of the Canvas API -->
+      <canvas
+        class="canvasContainer"
+        id="canvasContainer"
+        width="700px"
+        height="500px"
+      >
+      </canvas>
+    </div>
+    <form action="" class="uploadImage">
+      <p>Upload an Image</p>
+      <input type="file" onchange="handleImage(this.files)" id="imageInput" />
+    </form>
+    <div class="editionContainer" style="margin-bottom: 300px;">
+      <div class="editionButtons">
+        <h2 style="text-align: center;">Edition</h2>
+        <div class="brigButton">
+          <p>Brightness</p>
+          <input
+            type="range"
+            name=""
+            id="brightness"
+            min="1"
+            max="100"
+            value="100"
+            oninput="sliderValueBrig()"
+          />
+          <p>Value: <span id="brigOutput">100</span></p>
+        </div>
+        <div class="grayScaleButton">
+          <p>Gray Scale</p>
+          <input
+            type="range"
+            name=""
+            id="grayScale"
+            min="1"
+            max="100"
+            value="100"
+            oninput="sliderGrayScale()"
+          />
+          <p>Value: <span id="grayScaleValue">100</span></p>
+        </div>
+        <div class="constrastButton">
+          <p>Contrast</p>
+          <input
+            type="range"
+            name=""
+            id="contrastScale"
+            min="1"
+            max="100"
+            value="100"
+            oninput="sliderContrastScale()"
+          />
+          <p>Value: <span id="contrastScaleValue">100</span></p>
+        </div>
+        <div class="invertColorsButton">
+          <p>Invert Colors</p>
+          <input
+            type="range"
+            name=""
+            id="invertColors"
+            min="1"
+            max="100"
+            value="0"
+            oninput="sliderInvertColors()"
+          />
+          <p>Value: <span id="invertColorsValue">0</span></p>
+        </div>
+      </div>
+    </div>
+    <!-- <img src="../Resources/Waterfall_model.png" alt="" id="imgTest">
+    <img style="background-color: aqua;" id="test"></img> -->
+    <script src="../Controller/script.js" async defer></script>
+  </body>
+</html>
