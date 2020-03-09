@@ -32,6 +32,11 @@
     <form action="" class="uploadImage">
       <p>Upload an Image</p>
       <input type="file" onchange="handleImage(this.files)" id="imageInput" />
+      <!-- <a id="download" download="myImage.jpg">Dowaload Canvas</a> -->
+      <a class="bttnDownl" id="download" download="myImage.jpg">
+        <div id="spinAnim"></div>
+        <p>Let's Go!</p>
+      </a>
     </form>
     <div class="editionContainer" style="margin-bottom: 300px;">
       <div class="editionButtons">
@@ -42,7 +47,7 @@
             type="range"
             name=""
             id="brightness"
-            min="1"
+            min="0"
             max="100"
             value="100"
             oninput="sliderValueBrig()"
@@ -55,12 +60,12 @@
             type="range"
             name=""
             id="grayScale"
-            min="1"
+            min="0"
             max="100"
-            value="100"
+            value="0"
             oninput="sliderGrayScale()"
           />
-          <p>Value: <span id="grayScaleValue">100</span></p>
+          <p>Value: <span id="grayScaleValue">0</span></p>
         </div>
         <div class="constrastButton">
           <p>Contrast</p>
@@ -68,7 +73,7 @@
             type="range"
             name=""
             id="contrastScale"
-            min="1"
+            min="0"
             max="100"
             value="100"
             oninput="sliderContrastScale()"
@@ -81,7 +86,7 @@
             type="range"
             name=""
             id="invertColors"
-            min="1"
+            min="0"
             max="100"
             value="0"
             oninput="sliderInvertColors()"

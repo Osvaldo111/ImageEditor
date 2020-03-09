@@ -1,3 +1,11 @@
+function init() {
+  var downCanvasBtnn = document.getElementById("download");
+  downCanvasBtnn.addEventListener("click", () => {
+    downloadCanvas();
+  });
+}
+init();
+
 /**
  * Display the Image the user has uploaded.
  */
@@ -88,4 +96,13 @@ function sliderInvertColors() {
 function controlColorInvert(percentage) {
   const canvas = document.getElementById("canvasContainer");
   canvas.style.filter = "invert(" + percentage + "%)";
+}
+
+function downloadCanvas() {
+  var downCanvasBtnn = document.getElementById("download");
+
+  // The main Canvas
+  var canvas = document.getElementById("canvasContainer");
+  var imgUrl = canvas.toDataURL("image/jpg");
+  downCanvasBtnn.href = imgUrl;
 }

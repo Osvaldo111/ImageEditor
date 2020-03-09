@@ -3,7 +3,7 @@
   padding: 0;
 }
 html {
-  background-color: black;
+  background-color: #434e5e;
   height: 100vh;
   font-family: "Baloo Bhai", sans-serif;
   color: white;
@@ -51,4 +51,53 @@ body {
 
 .editionButtons > div {
   margin-bottom: 5px;
+}
+
+/*Download Button*/
+.bttnDownl {
+  display: inline-flex;
+  height: 40px;
+  width: 150px;
+  border: 2px solid #bfc0c0;
+  margin: 20px 20px 20px 20px;
+  color: #bfc0c0;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.bttnDownl p {
+  position: relative;
+  transition: all 0.45s ease-Out;
+}
+
+#spinAnim {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  left: 70px;
+  top: 20px;
+  transform: rotate(0deg);
+  background: none;
+  position: absolute;
+  transition: all 0.5s ease-Out;
+}
+
+.bttnDownl:hover #spinAnim {
+  width: 200%;
+  height: 500%;
+  opacity: 1;
+  left: -70px;
+  top: -70px;
+  background: #bfc0c0;
+  transform: rotate(80deg);
+}
+
+.bttnDownl:hover p {
+  color: #2d3142;
 }
